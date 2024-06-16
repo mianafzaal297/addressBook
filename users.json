@@ -1,0 +1,38 @@
+[
+  {
+    "id": 8,
+    "name": "Zainab"
+  },
+  {
+    "id": 4,
+    "name": "Mian Afzaal",
+    "gender": "male",
+    "email": "mianafzaal097@gmail.com",
+    "city": "Lahore",
+    "phone": "03482835397"
+  },
+  {
+    "id": 5,
+    "name": "Mian Bilal",
+    "gender": "male",
+    "email": "mianbilal297@gmail.com",
+    "city": "Islamabad",
+    "phone": "03086562297"
+  },
+  {
+    "id": 6,
+    "name": "Ali Hamza",
+    "gender": "male",
+    "email": "hamza@gmail.com",
+    "city": "Rawalpindi",
+    "phone": "03006565651"
+  },
+  {
+    "id": "11",
+    "name": "Awais Ali",
+    "gender": "male",
+    "email": "awais@gmail.com",
+    "city": "Islamabad",
+    "phone": "03427537613"
+  }
+]
