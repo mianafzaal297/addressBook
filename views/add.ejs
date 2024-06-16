@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #1e1e1e;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ddd;
+            text-align: left;
+            width: 100%;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .radio-group {
+            margin-bottom: 16px;
+            color: #ddd;
+            text-align: left;
+            width: 100%;
+        }
+
+        .radio-group label {
+            margin-right: 16px;
+        }
+
+        button[type="submit"] {
+            background-color: #76c7c0;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            max-width: 200px; /* Adjust width as needed */
+            text-align: center;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #5a9a9e;
+        }
+
+        .home-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #76c7c0;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            background-color: #76c7c0;
+            width: 100%;
+            max-width: 200px; /* Adjust width as needed */
+            text-align: center;
+        }
+
+        .home-link:hover {
+            background-color: #5a9a9e;
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="/add" method="post">
+        <h2>Add New User</h2>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="id">ID:</label>
+        <input type="text" id="id" name="id" required>
+        
+        <div class="radio-group">
+            <label>
+                <input type="radio" id="male" name="gender" value="male" required> Male
+            </label>
+            <label>
+                <input type="radio" id="female" name="gender" value="female" required> Female
+            </label>
+        </div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="city">City:</label>
+        <select id="city" name="city" required>
+            <option value="" disabled selected>Select City</option>
+            <option value="Karachi">Karachi</option>
+            <option value="Lahore">Lahore</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Rawalpindi">Rawalpindi</option>
+            <option value="Faisalabad">Faisalabad</option>
+            <!-- Add more cities as needed -->
+        </select>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required>
+
+        <button type="submit" style="color: #121212;">Add User</button>
+
+        <a href="/home" class="home-link" style="color: #121212;">Home</a>
+    </form>
+</body>
+</html>

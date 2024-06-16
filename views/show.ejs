@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ddd;
+        }
+
+        .user-details {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .user-details table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+            background-color: #242424;
+        }
+
+        .user-details th, .user-details td {
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background-color: #333;
+        }
+
+        .user-details th {
+            background-color: #444;
+            text-align: left;
+            font-weight: bold;
+            color: #ddd;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .user-details td {
+            color: #ddd;
+        }
+
+        .home-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #76c7c0;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, color 0.3s;
+            margin-top: 20px;
+        }
+
+        .home-button:hover {
+            background-color: #5a9a9e;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="user-details">
+        <h2>User Details</h2>
+        <table>
+            <% console.log("Current User:", model.user); %>
+            <% for (let us in model.user) { %>
+                <tr>
+                    <th><%= us %></th>
+                    <td><%= model.user[us] %></td>
+                </tr>
+            <% } %>
+        </table>
+        <a href="/home" class="home-button">Home</a>
+    </div>
+</body>
+</html>
